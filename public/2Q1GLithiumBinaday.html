@@ -29,17 +29,49 @@
       background-image: url("../asset/bg1.png");
       background-size: 100% 100%;
       color: white;
+      font-family: Tahoma, sans-serif;
       margin: 0;
       padding: 0;
     }
-    .text-box {
-      width: 60%; 
-      margin: 40px auto;
-      border: 3px solid white; 
-      border-radius: 10px; 
+    .overview-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap; 
+    }
+    .overview-text {
+      flex: 1 1 60%;
+      border: 2px solid red;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.4);
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.4); 
       text-align: justify;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      flex: 1 1 30%;
+    }
+    .image-column img {
+      width: 100%;
+      max-width: 200px;
+      border: 2px solid #550000
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image-column img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px red;
+    }
+    .image-column p {
+      text-align: center;
+      font-size: 13px;
+      color: white;
+      margin-top: 5px;
     }
     table {
       width: 80%;
@@ -90,9 +122,10 @@
         <h3> by <i>Li03</i>, Li06, Li30 </h3>
         <nav>
 
-          <a href="../index.html"> » Homepage </a>
-          <a href="https://sabbiecelis.github.io/2QPortfolioLiCelis/public/2Q1GLithiumCelis.html"> ⟡ Sabbie's Favorite: Anomaly Watch ⟡ </a>
-          <a href="https://quinnyap.github.io/2QPortfolioLiYap/public/2Q1&2GLithiumYap.html"> ⟡ Quinn's Favorite: 3008 ⟡ </a>
+          <b>₊˚ෆ Navigation ➜ </b>
+          <a href="../index.html">Homepage !</a>
+          <a href="https://sabbiecelis.github.io/2QPortfolioLiCelis/public/2Q1GLithiumCelis.html"> Sabbie's Favorite: Anomaly Watch ⟡ ⸝⸝ </a>
+          <a href="https://quinnyap.github.io/2QPortfolioLiYap/public/2Q1&2GLithiumYap.html"> Quinn's Favorite: 3008 ⟡ ⸝⸝ </a>
         </nav>
     </header>
     <section>
@@ -100,8 +133,9 @@
       <div>
         <a href="https://www.roblox.com/games/893973440/Flee-the-Facility"><img src="../asset/Flee the Facility.jpg" alt="Flee the Facility" style="width:498px;height:280px"></a>
       </div>
+    <div class="overview-container">
+    <div class="overview-text">
       <h3>Overview of Flee The Facility:</h3>
-    <div class="text-box">
     <p>
 Flee the Facility is a Roblox game with around 4.8 billion visits. This game was created by Andrew "MrWindy" Willeitner and inspired by Dead by Daylight. Its focus is for Survivors to escape a map while avoiding the Beast, who captures and freezes the Survivors in Freeze Pods. To escape, the Survivors need to hack the computers to unlock the Exit Doors. 
 If a Survivor gets captured by the Beast, the other Survivors in the game must free them. After a round, players are rewarded with credits, which can be used to buy items from crates, or during events, credit bundles, which grant different skins of hammers and gemstones.
@@ -112,6 +146,17 @@ The Beast is a role which is the main player/antagonist in Flee the Facility. An
 They have 15 minutes to escape, with a 15-second head start before the beast spawns. If the Beast hits a Survivor, they get knocked out. Other Survivors can then run over and help them get back up. The beast wins if they freeze all the Survivors before they can escape or if the Survivors run out of time. The Survivors wins if they are able to escape in time.
     </p>
     </div>
+    <div class="image-column">
+      <div>
+        <img src="./asset/Facility_0_Computer.webp" alt="Example of a Computer">
+        <p>There will be computers around the map for Survivors to hack, and are required to be completely hacked in order to power up the Exit Doors.</p>
+      </div>
+      <div>
+        <img src="./asset/Computer_Fail_Icon.webp" alt="Computer Fail Icon">
+        <p>While hacking, a Skill Check will appear occasionally. Failing to calibrate the Skill Check will "blow up" a computer. When this happens, everyone in the server, will hear an error sound, and a fail icon will be visible, alerting the computer's location. Survivor(s) hacking the computer will be disrupted, and the computer screen will turn red.</p>
+      </div>
+    </div>
+    </div>
     <h3> Watch this video for some tips! ⤵︎ </h3>
     <div>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/1vdvZRPvync?si=g5ynHVfbNayeZKEz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -119,6 +164,7 @@ They have 15 minutes to escape, with a 15-second head start before the beast spa
     </section>
 
     <section>
+      <hr>
 <h3> Best Current Flee The Facility Maps(for me)</h3>   
 <table>
   <tr>
@@ -130,7 +176,8 @@ They have 15 minutes to escape, with a 15-second head start before the beast spa
   <tr>
     <td>Facility_0</td>
     <td>MrWindy</td>
-    <td>Flee the Facility's first map.A hazy fog surrounds this map, which shows a very basic institution of some kind with basic lights and other elements. This is a really great map for beginner players.</td>
+    <td>Flee the Facility's first map.A hazy fog surrounds this map, which shows a very basic institution of some kind with basic lights and other elements. 
+    This is a really great map for beginner players.</td>
     <td>July 1, 2017</td>
   </tr>
   <tr>
@@ -162,6 +209,7 @@ They have 15 minutes to escape, with a 15-second head start before the beast spa
 
 </body>
 <footer>
+  <hr>
 <p>Copyright <span>&copy; 2025 Aliya Binaday</span></p>
 <h2>References:</h2>
 <p>Flee the Facility Wiki | Fandom. (n.d.). https://flee-the-facility.fandom.com/wiki/Home</p>
