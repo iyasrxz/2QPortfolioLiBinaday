@@ -1,30 +1,135 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="2Q Portfolio">
     <meta name = "keywords" content = "2Q, Portfolio, Projects, Web Development">
     <meta name="author" content="BINADAY, Aliya Louise B.">
     <title>2Q Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./asset/logo.png" sizes="32x32" type="image/png">
     <link rel="icon" href="./asset/hehe.png" sizes="32x32" type="Image/png"> 
     <script src="script.js" defer></script>
 
+<style>
+  :root {
+    --green-dark: #416449;
+    --green-light: #7fa06b;
+    --pink-light: #fce0e1;
+    --pink-soft: #F9E0DB;
+    --pink-warm: #daaaa1;
+    --white: #ffffff;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--pink-light);
+    font-family: "Poppins", sans-serif;
+    color: var(--green-dark);
+    text-align: center;
+  }
+  header {
+    background-color: var(--green-dark);
+    color: var(--white);
+    padding: 25px 15px;
+    border-bottom: 4px solid var(--pink-warm);
+  }
+  header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--pink-light);
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+  header h1 {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 2rem;
+    margin: 10px 0 0;
+  }
+  header p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+    color: var(--white);
+  }
+  nav {
+    background-color: var(--pink-warm);
+    padding: 20px;
+    border-top: 3px solid var(--green-dark);
+    border-bottom: 3px solid var(--green-dark);
+  }
+  nav button {
+    background-color: var(--green-light);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  nav button:hover {
+    background-color: var(--green-dark);
+    box-shadow: 0 0 10px var(--pink-soft);
+  }
+  .links {
+    display: none;
+    margin-top: 10px;
+  }
+  .links a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--white);
+    color: var(--green-dark);
+    border: 2px solid var(--green-dark);
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin: 6px;
+    transition: all 0.3s ease;
+  }
+  .links a:hover {
+    background-color: var(--green-dark);
+    color: var(--white);
+  }
+  footer {
+    background-color: var(--green-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 12px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <img src = "./asset/hehe.png" alt="Aliya's Logo" title="૮₍ ⸝⸝´ ꒳ `⸝⸝ ₎ა" width="100px" height="100px">
-        <h1>₊˚⊹Welcome to Aliya's 2Q Portfolio⋆˚꩜.ᐟ</h1>
-    </header>
-    <nav>
-    <ul>
-        <li><a href="./public/2Q1GLithiumBinaday.html"><b> Q2 1st Graded Exercise </b></a></li>
-        <li><a href="./public/Q21NGLithiumBinaday.html"><b> Q2 1st Non-Graded Exercise </b></a></li>
-    </ul>
-    </nav>
-<footer>
-    <p>Copyright <span>&copy; 2025 Aliya Binaday</span></p>
-</footer>
+  <header>
+    <img src="./asset/hehe.png" alt="Aliya's Logo" title="૮₍ ⸝⸝´ ꒳ `⸝⸝ ₎ა" width="100px" height="100px">
+    <h1>₊˚⊹ CS3 Quarter 2 Portfolio ⋆˚꩜.ᐟ</h1>
+    <p>by BINADAY, Aliya Louise</p>
+    <p> 9 - Lithium </p>
+  </header>
+  <nav>
+    <button onclick="toggleLinks()"> Click to see Exercises !</button>
+    <div class="links" id="exerciseLinks">
+      <a href="./public/2Q1GLithiumBinaday.html"> Q2 1st Graded Exercise </a>
+      <a href="./public/Q21NGLithiumBinaday.html"> Q2 1st Non-Graded Exercise </a>
+    </div>
+  </nav>
+  <footer>
+    <p>Copyright <span>&copy; 2025 Aliya Binaday | PSHS-MC </span></p>
+  </footer>
+  <script>
+    function toggleLinks() {
+      const links = document.getElementById("exerciseLinks");
+      if (links.style.display === "none" || links.style.display === "") {
+        links.style.display = "block";
+      } else {
+        links.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
